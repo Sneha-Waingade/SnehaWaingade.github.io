@@ -1,0 +1,288 @@
+<html><head><base href="/" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>
+:root {
+  --primary: #2d3436;
+  --accent: #6c5ce7;
+  --text: #2d3436;
+  --light: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.header-title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 100px 5%;
+}
+
+.projects {
+  background: #f9f9f9;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 5%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-link {
+  color: var(--text);
+  font-size: 1.5rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+</style></head><body>
+
+<nav class="nav">
+  <div class="logo">Sneha</div>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+  </div>
+</nav>
+
+<header class="header" id="about">
+  <svg class="animated-bg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#6c5ce7;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#a8e6cf;stop-opacity:0.1" />
+      </linearGradient>
+    </defs>
+    <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#gradient)">
+      <animate attributeName="d" 
+        dur="20s" 
+        repeatCount="indefinite"
+        values="M0,0 L100,0 L100,100 L0,100 Z;
+                M0,0 L100,0 L90,100 L0,90 Z;
+                M0,0 L100,0 L100,100 L0,100 Z"/>
+    </path>
+  </svg>
+  <div class="header-content">
+    <h1 class="header-title">Hi, I'm Sneha</h1>
+    <p class="header-subtitle">Web Developer & Software Engineer</p>
+    <div class="social-links">
+      <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="mailto:contact@example.com" class="social-link">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <h3>Web Development</h3>
+      <p>HTML, CSS, JavaScript, Responsive Design</p>
+    </div>
+    <div class="skill-card">
+      <h3>C/C++</h3>
+      <p>Data Structures, Algorithms, System Programming</p>
+    </div>
+    <div class="skill-card">
+      <h3>Python</h3>
+      <p>Scripting, Automation, Data Analysis</p>
+    </div>
+  </div>
+</section>
+
+<section class="section projects" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-content">
+        <h3>E-Commerce Platform</h3>
+        <p>A full-stack e-commerce solution with modern UI/UX and secure payment integration.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-content">
+        <h3>SRFLUS</h3>
+        <p>A service-oriented platform designed to serve and connect users efficiently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all cards
+document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'all 0.6s ease';
+    observer.observe(card);
+});
+</script>
+
+</body></html>
